@@ -1,12 +1,13 @@
 # rmm-services-server-app
 
-1- To create database execute script "rmm.sql"
-2- Change line 6 in "application.properties" file, found in the "resource" folder of the application, to this "spring.datasource.initialization-mode=always"
-With this change the first time that the application run will set some data to the database using the file "data.sql" found in the "resource" folder of the application
-3- Import Existing Maven Project with Eclipse
-4- Open a project terminal in eclipse and run "mvn clean install" command.
+1- Import Existing Maven Project with Eclipse.
+2- Open a project terminal in eclipse and run command "mvn clean install".
+3- Change line 6 in "application.properties" file, found in the "resource" folder of the application, to this "spring.datasource.initialization-mode=always"
 5- Run the application (right click over the application - Run As - Java Application).
-Select "RmmServiceServerAppApplicataion" and click "Ok"
+Select "RmmServiceServerAppApplicataion" and click "Ok".
+With the step 3 and after step 5 will create the database "rmm" and will set some data to the tables using the file "data.sql" found in the "resource" folder of the application
+6- Change line 6 in "application.properties" file, found in the "resource" folder of the application, to this "spring.datasource.initialization-mode=never"
+Step 6 will prevent the "data.sql" file from being executed every time the application is run.
 -----------------------------------------------------------------------------------------------
 Postman: Basic Auth
 Username: user

@@ -36,9 +36,6 @@ import com.ninjaone.test.services.CustomerDeviceServiceSrv;
 
 import static org.hamcrest.Matchers.hasSize;
 
-/*import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;*/
-
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -48,7 +45,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 @TestPropertySource(locations = "classpath:application-integrationtest.properties")
 public class CustomerDeviceServiceCtrlIntegrationTest {
 
